@@ -29,19 +29,36 @@
 			"text": "Beer Consumption per Capita By Country",
 			"align": "center"
 		},
-		
-        "data": {"url": "Germany.csv"},
-        "mark": 
+	"layer": [
 		{
-			"type": "line",
-			"point": true
+			"data": {"url": "Germany.csv"},
+			"mark": 
+				{
+					"type": "line",
+					"point": true
+				},
+
+			"encoding": 
+				{
+					"x": {"field": "Year", "type": "nominal"},
+					"y": {"field": "Beer", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
+				}
 		},
-		
-        "encoding": 
 		{
-			"x": {"field": "Year", "type": "nominal"},
-			"y": {"field": "Beer", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
+			"data": {"url": "Japan.csv"},
+			"mark": 
+				{
+					"type": "line",
+					"point": true
+				},
+
+			"encoding": 
+				{
+					"x": {"field": "Year", "type": "nominal"},
+					"y": {"field": "Beer", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
+				}
 		}
+		]
 	};
 
       // Embed the visualization in the container with id `vis`
