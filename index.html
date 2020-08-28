@@ -22,7 +22,7 @@
     <script>
       // Assign the specification to a local variable vlSpec.
       var vlSpec = 
-	  {
+	{
         $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
 		"title":
 		{
@@ -41,9 +41,21 @@
 		{
 			"x": {"field": "Year", "type": "nominal"},
 			"y": {"field": "Beer", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
-			"color": {"field": "Country", "type": "nominal"}
 		}
-      };
+		
+	"data": {"url": "Japan.csv"},
+        "mark": 
+		{
+			"type": "line",
+			"point": true
+		},
+		
+        "encoding": 
+		{
+			"x": {"field": "Year", "type": "nominal"},
+			"y": {"field": "Beer", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
+		}
+	};
 
       // Embed the visualization in the container with id `vis`
       vegaEmbed('#vis', vlSpec);
