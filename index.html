@@ -33,8 +33,7 @@
 		{
 			"data": 
 				{
-				"url": "Germany.csv", 
-				"resolve": {"scale": {"color": "independent"}}
+				"url": "Germany.csv"
 				},
 			"mark": 
 				{
@@ -117,6 +116,25 @@
 					"x": {"field": "Year", "type": "temporal"},
 					"y": {"field": "Beer", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
 				}
+		},
+		{
+		      "mark": {
+				"type": "rule"
+		      	},
+		      "data": {
+				"values": 
+				[{
+			    		"color": "Country"
+			  	}]
+		      	},
+		      "encoding": {
+		      		"color": {
+			  		"field": "color", 
+			 		 "sort": false,
+			  		"type": "nominal",
+			  		"legend": { "title": "" }
+					} 
+		      	}
 		}
 		]
 	};
