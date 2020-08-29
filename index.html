@@ -31,6 +31,8 @@
 		},
 		"width": 400,
 		"height": 300,
+		"repeat": ["Beer", "Wine", "Spirits", "Alcohol"],
+		"columns": 2,
 		"layer": [
 			{
 				"data": 
@@ -46,7 +48,7 @@
 				"encoding": 
 					{
 						"x": {"field": "Year", "type": "temporal"},
-						"y": {"field": "Beer", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
+						"y": {"field": {"field": {"repeat": "repeat"}, "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
 						"color": {"field": "Country", "type": "nominal"}
 					}
 			},
@@ -61,7 +63,7 @@
 				"encoding": 
 					{
 						"x": {"field": "Year", "type": "temporal"},
-						"y": {"field": "Beer", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
+						"y": {"field": {"field": {"repeat": "repeat"}, "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
 						"color": {"field": "Country", "type": "nominal"}
 					}
 			},
@@ -76,7 +78,7 @@
 				"encoding": 
 					{
 						"x": {"field": "Year", "type": "temporal"},
-						"y": {"field": "Beer", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
+						"y": {"field": {"field": {"repeat": "repeat"}, "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
 						"color": {"field": "Country", "type": "nominal"}
 					}
 			},
@@ -91,7 +93,7 @@
 				"encoding": 
 					{
 						"x": {"field": "Year", "type": "temporal"},
-						"y": {"field": "Beer", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
+						"y": {"field": {"field": {"repeat": "repeat"}, "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
 						"color": {"field": "Country", "type": "nominal"}
 					}
 			},
@@ -106,7 +108,7 @@
 				"encoding": 
 					{
 						"x": {"field": "Year", "type": "temporal"},
-						"y": {"field": "Beer", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
+						"y": {"field": {"field": {"repeat": "repeat"}, "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
 						"color": {"field": "Country", "type": "nominal"}
 					}
 			},
@@ -121,7 +123,7 @@
 				"encoding": 
 					{
 						"x": {"field": "Year", "type": "temporal"},
-						"y": {"field": "Beer", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
+						"y": {"field": {"field": {"repeat": "repeat"}, "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
 						"color": {"field": "Country", "type": "nominal"}
 					}
 			}]
