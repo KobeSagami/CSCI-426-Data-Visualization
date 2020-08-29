@@ -38,13 +38,13 @@
 			"mark": 
 				{
 					"type": "line",
-					"color": "#FF0000"
 				},
 
 			"encoding": 
 				{
 					"x": {"field": "Year", "type": "temporal"},
 					"y": {"field": "Beer", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
+					"color": ("field": "Country", "type": "nominal"}
 				}
 		},
 		{
@@ -116,25 +116,6 @@
 					"x": {"field": "Year", "type": "temporal"},
 					"y": {"field": "Beer", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
 				}
-		},
-		{
-		      "mark": {
-				"type": "rule"
-		      	},
-		      "data": {
-				"values": 
-				[{
-			    		"color": "Country"
-			  	}]
-		      	},
-		      "encoding": {
-		      		"color": {
-			  		"field": "color", 
-			 		 "sort": false,
-			  		"type": "nominal",
-			  		"legend": { "title": "" }
-					} 
-		      	}
 		}
 		]
 	};
