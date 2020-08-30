@@ -29,105 +29,28 @@
 			"text": "Beer Consumption per Capita By Country",
 			"align": "center"
 		},
-		"layer": [
+		{
+			"data": 
+				{
+				"url": "Combined.csv"
+				},
+	  		"repeat": ["Beer", "Wine", "Spirits", "Alcohol"],
+			"spec" :
 			{
-				"data": 
-					{
-					"url": "Germany.csv"
-					},
 				"mark": 
-					{
-						"type": "line",
-						"point": true
-					},
+				{
+					"type": "line",
+					"point": true
+				},
 
 				"encoding": 
-					{
-						"x": {"field": "Year", "type": "temporal"},
-						"y": {"field": "Beer", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
-						"color": {"field": "Country", "type": "nominal"}
-					}
-			},
-			{
-				"data": {"url": "Japan.csv"},
-				"repeat": ["Beer", "Wine", "Spirits", "Alcohol"],
-				"mark": 
-					{
-						"type": "line",
-						"point": true
-					},
-
-				"encoding": 
-					{
-						"x": {"field": "Year", "type": "temporal"},
-						"y": {"field": "Beer", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
-						"color": {"field": "Country", "type": "nominal"}
-					}
-			},
-			{
-				"data": {"url": "France.csv"},
-				"repeat": ["Beer", "Wine", "Spirits", "Alcohol"],
-				"mark": 
-					{
-						"type": "line",
-						"point": true
-					},
-
-				"encoding": 
-					{
-						"x": {"field": "Year", "type": "temporal"},
-						"y": {"field": "Beer", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
-						"color": {"field": "Country", "type": "nominal"}
-					}
-			},
-			{
-				"data": {"url": "USA.csv"},
-				"repeat": ["Beer", "Wine", "Spirits", "Alcohol"],
-				"mark": 
-					{
-						"type": "line",
-						"point": true
-					},
-
-				"encoding": 
-					{
-						"x": {"field": "Year", "type": "temporal"},
-						"y": {"field": "Beer", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
-						"color": {"field": "Country", "type": "nominal"}
-					}
-			},
-			{
-				"data": {"url": "Australia.csv"},
-				"repeat": ["Beer", "Wine", "Spirits", "Alcohol"],
-				"mark": 
-					{
-						"type": "line",
-						"point": true
-					},
-
-				"encoding": 
-					{
-						"x": {"field": "Year", "type": "temporal"},
-						"y": {"field": "Beer", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
-						"color": {"field": "Country", "type": "nominal"}
-					}
-			},
-			{
-				"data": {"url": "Ireland.csv"},
-				"repeat": ["Beer", "Wine", "Spirits", "Alcohol"],
-				"mark": 
-					{
-						"type": "line",
-						"point": true
-					},
-
-				"encoding": 
-					{
-						"x": {"field": "Year", "type": "temporal"},
-						"y": {"field": "Beer", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
-						"color": {"field": "Country", "type": "nominal"}
-					}
-			}]
+				{
+					"x": {"field": "Year", "type": "temporal"},
+					"y": {"field": {"repeat": "repeat"}, "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
+					"color": {"field": "Country", "type": "nominal"}
+				}
+			}
+		}
 	};
 
       // Embed the visualization in the container with id `vis`
