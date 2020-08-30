@@ -23,26 +23,71 @@
       // Assign the specification to a local variable vlSpec.
       var vlSpec = 
 	{
-		"$schema": "https://vega.github.io/schema/vega-lite/v2.json",
-		{
-		  	"data": 
-			{
-		    		"url": "Combined.csv"
-			},
-		  	"repeat": ["Beer", "Wine", "Spirits", "Alcohol"],
-				
-		  	"spec": 
-			{
-		    		"mark": "line",
-		    		"encoding": 
-				{
-		      			"x": {"field": "Year", "type": "temporal"},
-		      			"y": {"field": {"repeat": "repeat"}, "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
-		      			"color": {"field": "Country", "type": "nominal"}
-		    		}
-		  	}	
-		}
-	    };
+	"$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+	"data": {"url": "Combined.csv"},
+	  "hconcat": [
+	    {
+	      "mark": {"type": "line"},
+	      "encoding": {
+		"x": {
+		  "field": "Year",
+		  "type": "temporal"
+		},
+		"y": {
+		  "field": "Beer",
+		  "type": "quantitative",
+		  "title": "Consumption Per Capita (litres of alcohol)"
+		},
+		"color": {"field": "Country", "type": "nominal"}
+	      }
+	    },
+	    {
+	      "mark": {"type": "line"},
+	      "encoding": {
+		"x": {
+			"field": "Year",
+			"type": "temporal"
+		},
+		"y": {
+		  	"field": "Wine",
+			"type": "quantitative",
+		  	"title": "Consumption Per Capita (litres of alcohol)"
+		},
+		"color": {"field": "Country", "type": "nominal"}
+	      }
+	    },
+	    {
+	      "mark": {"type": "line"},
+	      "encoding": {
+		"x": {
+		  	"field": "Year",
+			"type": "temporal"
+		},
+		"y": {
+		  	"field": "Spirits",
+			"type": "quantitative",
+		  	"title": "Consumption Per Capita (litres of alcohol)"
+		},
+		"color": {"field": "Country", "type": "nominal"}
+	      }
+	    },
+	    {
+	      "mark": {"type": "line"},
+	      "encoding": {
+		"x": {
+		  	"field": "Year",
+			"type": "temporal"
+		},
+		"y": {
+		  	"field": "Alcohol",
+			"type": "quantitative",
+		  	"title": "Consumption Per Capita (litres of alcohol)"
+		},
+		"color": {"field": "Country", "type": "nominal"}
+	      }
+	    }
+	  ]
+	}
 
       // Embed the visualization in the container with id `vis`
       vegaEmbed('#vis', vlSpec);
