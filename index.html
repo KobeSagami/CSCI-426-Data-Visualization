@@ -24,22 +24,26 @@
       var vlSpec = 
 	{
 		"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-		"data":
+		"repeat": ["Beer", "Wine", "Spirits", "Alcohol"]
+		"columns": 2,
+		"spec":
 		{
-			"url": "Combined.csv"
-		},
+			"data":
+			{
+				"url": "Combined.csv"
+			},
 
-		"mark": 
-		{
-			"type": "line",
-		},
+			"mark": 
+			{
+				"type": "line",
+			},
 
-		"encoding": 
-		{
-			"column": {"field": "Type", "title": "Consumption of Different Types of Alcohol By Country"},
-			"x": {"field": "Year", "type": "temporal"},
-			"y": {"field": "lac", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
-			"color": {"field": "Country", "type": "nominal"}
+			"encoding": 
+			{
+				"x": {"field": "Year", "type": "temporal"},
+				"y": {"field": {"repeat": "repeat"}, "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
+				"color": {"field": "Country", "type": "nominal"}
+			}
 		}
 	};
 
