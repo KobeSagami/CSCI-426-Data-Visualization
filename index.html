@@ -26,20 +26,69 @@
 	  "data": {
 	    "url": "Combined.csv"
 	  },
-	  "repeat": ["Beer", "Wine", "Spirits", "Alcohol"],
-	  "spec": {
-	    "mark": "line",
-	    "encoding": {
-	      "x": {"field": "Year", "type": "temporal"},
-	      "y": {
-		"field": {"repeat": "repeat"},
-		"type": "quantitative",
-		"title": "Consumption Per Capita (litres of alcohol)"
-	      },
-	      "color": {"field": "Country", "type": "nominal"}
-	    }
-	  }
-	};
+	  "hconcat": [
+	    {
+	      "mark": {"type": "line"},
+	      "encoding": {
+		"x": {
+		  "field": "Year",
+		  "type": "temporal"
+		},
+		"y": {
+		  "field": "Beer",
+		  "type": "Quantitative",
+		  "title": "Consumption Per Capita (litres of alcohol)"
+		},
+		"color": {"field": "Country", "type": "nominal"}
+	      }
+	    },
+	    {
+	      "mark": {"type": "line"},
+	      "encoding": {
+		"x": {
+		  "field": "Year",
+		  "type": "temporal"
+		},
+		"y": {
+		  "field": "Wine",
+		  "type": "Quantitative",
+		  "title": "Consumption Per Capita (litres of alcohol)"
+		},
+		"color": {"field": "Country", "type": "nominal"}
+	      }
+	    },
+	    {
+	      "mark": {"type": "line"},
+	      "encoding": {
+		"x": {
+		  "field": "Year",
+		  "type": "temporal"
+		},
+		"y": {
+		  "field": "Spirits",
+		  "type": "Quantitative",
+		  "title": "Consumption Per Capita (litres of alcohol)"
+		},
+		"color": {"field": "Country", "type": "nominal"}
+	      }
+	    },
+	    {
+	      "mark": {"type": "line"},
+	      "encoding": {
+		"x": {
+		  "field": "Year",
+		  "type": "temporal"
+		},
+		"y": {
+		  "field": "Alcohol",
+		  "type": "Quantitative",
+		  "title": "Consumption Per Capita (litres of alcohol)"
+		},
+		"color": {"field": "Country", "type": "nominal"}
+	      }
+	    },
+	  ]
+	}
 
       // Embed the visualization in the container with id `vis`
       vegaEmbed('#vis', vlSpec);
