@@ -24,19 +24,16 @@
       var vlSpec = 
 	{
         $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
-		"title":
 		{
-			"text": "Beer Consumption per Capita By Country",
-			"align": "center"
-		},
-		{
-			"data": 
-				{
-				"url": "Combined.csv"
-				},
 	  		"repeat": ["Beer", "Wine", "Spirits", "Alcohol"],
+			"columns": 2,
 			"spec" :
 			{
+				"data":
+				{
+					"url": "Combined.csv"
+				},
+					
 				"mark": 
 				{
 					"type": "line",
