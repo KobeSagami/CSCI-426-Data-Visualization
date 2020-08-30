@@ -28,7 +28,11 @@
 		{
 			"url": "Combined.csv"
 		},
+		
+		"repeat": ["Beer", "Wine", "Spirits", "Alcohol"],
+		"Columns", 2,
 	  
+		"spec": {
 		"mark": 
 		{
 			"type": "line",
@@ -36,10 +40,10 @@
 
 		"encoding": 
 		{
-			"facet": {"field": "Type", "type": "ordinal", "columns": 2},
 			"x": {"field": "Year", "type": "temporal"},
-			"y": {"field": "lac", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
+			"y": {"field": {"repeat": "repeat"}, "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
 			"color": {"field": "Country", "type": "nominal"}
+		}
 		}
 	};
 
