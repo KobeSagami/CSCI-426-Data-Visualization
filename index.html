@@ -24,8 +24,11 @@
       var vlSpec = 
 	{
 	"$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+		
 	"data": {"url": "Combined.csv"},
-	  "hconcat": [
+		
+	  "columns": 2,
+	  "concat": [
 	    {
 		"title": "Beer",
 	      "mark": {"type": "line"},
