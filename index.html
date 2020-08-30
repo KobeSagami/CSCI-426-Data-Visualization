@@ -23,26 +23,24 @@
       // Assign the specification to a local variable vlSpec.
       var vlSpec = 
 	{
-        $schema: "https://vega.github.io/schema/vega-lite/v4.json",
+		"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+		"data":
 		{
-			"data":
-			{
-				"url": "Combined.csv"
-			},
-				
-			"mark": 
-			{
-				"type": "line",
-				"point": true
-			},
-				
-			"encoding": 
-			{
-				"column": {"field": "Type"},
-				"x": {"field": "Year", "type": "temporal"},
-				"y": {"field": "lac", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
-				"color": {"field": "Country", "type": "nominal"}
-			}
+			"url": "Combined.csv"
+		},
+
+		"mark": 
+		{
+			"type": "line",
+			"point": true
+		},
+
+		"encoding": 
+		{
+			"column": {"field": "Type"},
+			"x": {"field": "Year", "type": "temporal"},
+			"y": {"field": "lac", "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
+			"color": {"field": "Country", "type": "nominal"}
 		}
 	};
 
