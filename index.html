@@ -30,9 +30,9 @@
 	    "data": {"url": "Combined.csv"},
 	    "mark": {"type": "line"},
 	    "encoding": {
-	      "x": {"field": "Year"},
-	      "y": {"field": {"repeat": "repeat"}},
-	      "color": {"field": "Country"}
+	      "x": {"field": "Year", "type": "temporal"},
+	      "y": {"field": {"repeat": "repeat"}, "type": "quantitative", "title": "Consumption Per Capita (litres of alcohol)"},
+	      "color": {"field": "Country", "type": "nominal"}
 	    }
 	  }
 	};
